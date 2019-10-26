@@ -104,7 +104,7 @@
 }
     /* sidebar right */
 .resize {
-    padding: 20px 10px;
+    padding: 20px;
 }
 .size-switcher {
     box-shadow: 0 1px 6px 1px gray;
@@ -122,4 +122,39 @@
 }
 .size__input {
     margin-right: 12px;
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image {
+        order: 1;
+    }
+    .settings {
+        flex-direction: row;
+        padding: 10px;
+    }
+    .toolbar {
+        margin-right: 10px;
+    }
+    .resize {
+        padding: 10px;  
+        padding-left: 0;
+    }
+    .instrument {
+        padding: 12px 10px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .canvas {
+        width: 340px;
+    }
+    .resize {
+        order: -1;
+    }
+    .size {
+        display: inline-block;
+    }
 }
