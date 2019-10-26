@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>codejam canvas</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
@@ -34,8 +36,22 @@
             <div class="image">
                 <canvas id="canvas" width="512" height="512"></canvas>
             </div>
+            <aside class="resize">
+                <div class="size-switcher">
+                    <label class="size">
+                        <input class="size__input" type="radio" name="size" checked><span>4x4</span>
+                    </label>
+                    <label class="size">
+                        <input class="size__input" type="radio" name="size"><span>32x32</span>
+                    </label>
+                    <label class="size">
+                        <input class="size__input" type="radio" name="size"><span>image</span>
+                    </label>
+                </div>
+            </aside>
         </main>
     </div>
 </body>
 <script src="main.js"></script>
+
 </html>

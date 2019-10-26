@@ -24,19 +24,22 @@
     /* main */
 .main {
     display: flex;
+    flex-wrap: wrap;
 }
 .image {
     flex-grow: 1;
+    padding: 20px 0;
 }
     /* sidebar */
 .settings {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 .toolbar, .color-panel {
     box-shadow: 0 1px 6px 1px gray;
+    min-width: 190px;
 }
 .instrument {
     padding: 12px 20px;
@@ -92,4 +95,29 @@
 }
 .color-panel .instrument:nth-child(4)::before {
     background: rgb(0, 0, 255);
+}
+
+#canvas {
+    border: 1px solid;
+}
+    /* sidebar right */
+.resize {
+    padding: 10px;
+}
+.size-switcher {
+    box-shadow: 0 1px 6px 1px gray;
+    min-width: 100px;
+    padding: 10px;
+}
+.size {
+    display: block;
+    padding: 10px 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+.size:hover {
+    color: darkcyan;
+}
+.size__input {
+    margin-right: 12px;
 }
