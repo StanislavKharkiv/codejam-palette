@@ -7,12 +7,15 @@
 
 .wrapper {
   max-width: 1440px;
+  margin: auto;
   font-family: Roboto, sans-serif;
+  box-shadow: 0 0 50px 1px gray;
 }
 /*  Header */
 .header {
   height: 48px;
   box-shadow: 0 1px 5px 1px gray;
+  margin-bottom: 10px;
 }
 .h1 {
   margin-left: 35px;
@@ -24,7 +27,6 @@
     /* main */
 .main {
     display: flex;
-    flex-wrap: wrap;
 }
 .image {
     flex-grow: 1;
@@ -96,18 +98,18 @@
 .color-panel .instrument:nth-child(4)::before {
     background: rgb(0, 0, 255);
 }
-
-#canvas {
-    border: 1px solid;
+.canvas {
+    display: block;
+    margin: auto;
 }
     /* sidebar right */
 .resize {
-    padding: 10px;
+    padding: 20px 10px;
 }
 .size-switcher {
     box-shadow: 0 1px 6px 1px gray;
     min-width: 100px;
-    padding: 10px;
+    padding: 10px 20px;
 }
 .size {
     display: block;
