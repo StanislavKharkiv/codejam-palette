@@ -1,0 +1,95 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1440px;
+  font-family: Roboto, sans-serif;
+}
+/*  Header */
+.header {
+  height: 48px;
+  box-shadow: 0 1px 5px 1px gray;
+}
+.h1 {
+  margin-left: 35px;
+  line-height: 48px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+    /* main */
+.main {
+    display: flex;
+}
+.image {
+    flex-grow: 1;
+}
+    /* sidebar */
+.settings {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.toolbar, .color-panel {
+    box-shadow: 0 1px 6px 1px gray;
+}
+.instrument {
+    padding: 12px 20px;
+    cursor: pointer;
+    list-style: none;
+    transition: .3s;
+}
+.instrument:nth-child(2) {
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
+.instrument:hover {
+    color: darkcyan;
+}
+.toolbar .instrument::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 35px;
+}
+.toolbar .instrument:first-child::before {
+    background: url("img/icon-bucket.svg") center no-repeat;
+}
+.toolbar .instrument:nth-child(2)::before {
+    background: url("img/icon-choose-color.svg") center no-repeat;
+}
+.toolbar .instrument:nth-child(3)::before {
+    background: url("img/icon-move.svg") center no-repeat;
+}
+.toolbar .instrument:nth-child(4)::before {
+    background: url("img/icon-transform.svg") center no-repeat;
+}
+
+.color-panel .instrument::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 18px;
+    border-radius: 50%;
+    border: 1px solid;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+.color-panel .instrument:first-child::before {
+    background: rgb(150, 150, 150);
+}
+.color-panel .instrument:nth-child(2)::before {
+    background: rgb(65, 247, 149);
+}
+.color-panel .instrument:nth-child(3)::before {
+    background: rgb(255, 0, 0);
+}
+.color-panel .instrument:nth-child(4)::before {
+    background: rgb(0, 0, 255);
+}
