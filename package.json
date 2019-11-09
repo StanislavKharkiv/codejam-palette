@@ -1,0 +1,25 @@
+{
+  "name": "palette",
+  "version": "1.0.0",
+  "description": "codejam-palette",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix palette/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StanislavKharkiv/codejam-canvas.git"
+  },
+  "author": "StanislavKharkiv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StanislavKharkiv/codejam-canvas/issues"
+  },
+  "homepage": "https://github.com/StanislavKharkiv/codejam-canvas#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}

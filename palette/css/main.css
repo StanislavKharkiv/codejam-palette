@@ -49,9 +49,6 @@
     list-style: none;
     transition: .3s;
 }
-.instrument:nth-child(2) {
-    border-bottom: 1px solid rgb(199, 199, 199);
-}
 .instrument:hover {
     color: darkcyan;
 }
@@ -63,16 +60,16 @@
     margin-right: 35px;
 }
 .toolbar .instrument:first-child::before {
-    background: url("img/icon-bucket.svg") center no-repeat;
+    background: url("../img/icon-bucket.svg") center no-repeat;
 }
 .toolbar .instrument:nth-child(2)::before {
-    background: url("img/icon-choose-color.svg") center no-repeat;
+    background: url("../img/icon-choose-color.svg") center no-repeat;
 }
 .toolbar .instrument:nth-child(3)::before {
-    background: url("img/icon-move.svg") center no-repeat;
+    background: url("../img/icon-pencil.svg") center no-repeat;
 }
 .toolbar .instrument:nth-child(4)::before {
-    background: url("img/icon-transform.svg") center no-repeat;
+    background: url("../img/icon-transform.svg") center no-repeat;
 }
 
 .color-panel .instrument::before {
@@ -101,6 +98,7 @@
 .canvas {
     display: block;
     margin: auto;
+    border: 2px solid;
 }
     /* sidebar right */
 .resize {
