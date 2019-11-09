@@ -52,6 +52,9 @@
 .instrument:hover {
     color: darkcyan;
 }
+.instr_active {
+    background: #ddd;
+}
 .toolbar .instrument::before {
     content: "";
     display: inline-block;
@@ -89,10 +92,10 @@
 .color-panel .instrument:nth-child(2)::before {
     background: rgb(65, 247, 149);
 }
-.color-panel .instrument:nth-child(3)::before {
+.color-panel .instrument:nth-child(4)::before {
     background: rgb(255, 0, 0);
 }
-.color-panel .instrument:nth-child(4)::before {
+.color-panel .instrument:nth-child(5)::before {
     background: rgb(0, 0, 255);
 }
 .canvas {
