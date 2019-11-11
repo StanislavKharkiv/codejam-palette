@@ -1,161 +1,175 @@
 /* reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.wrapper {
-  max-width: 1440px;
-  margin: auto;
-  font-family: Roboto, sans-serif;
-  box-shadow: 0 0 50px 1px gray;
-}
-/*  Header */
-.header {
-  height: 48px;
-  box-shadow: 0 1px 5px 1px gray;
-  margin-bottom: 10px;
-}
-.h1 {
-  margin-left: 35px;
-  line-height: 48px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-}
-    /* main */
-.main {
-    display: flex;
-}
-.image {
-    flex-grow: 1;
-    padding: 20px 0;
-}
-    /* sidebar */
-.settings {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.toolbar, .color-panel {
-    box-shadow: 0 1px 6px 1px gray;
-    min-width: 190px;
-}
-.instrument {
-    padding: 12px 20px;
-    cursor: pointer;
-    list-style: none;
-    transition: .3s;
-}
-.instrument:hover {
-    color: darkcyan;
-}
-.instr_active {
-    background: #ddd;
-}
-.toolbar .instrument::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 35px;
-}
-.toolbar .instrument:first-child::before {
-    background: url("../img/icon-bucket.svg") center no-repeat;
-}
-.toolbar .instrument:nth-child(2)::before {
-    background: url("../img/icon-choose-color.svg") center no-repeat;
-}
-.toolbar .instrument:nth-child(3)::before {
-    background: url("../img/icon-pencil.svg") center no-repeat;
-}
-.toolbar .instrument:nth-child(4)::before {
-    background: url("../img/icon-transform.svg") center no-repeat;
-}
-
-.color-panel .instrument::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-right: 18px;
-    border-radius: 50%;
-    border: 1px solid;
-    vertical-align: middle;
-    margin-top: -4px;
-}
-.color-panel .instrument:first-child::before {
-    background: rgb(150, 150, 150);
-}
-.color-panel .instrument:nth-child(2)::before {
-    background: rgb(65, 247, 149);
-}
-.color-panel .instrument:nth-child(4)::before {
-    background: rgb(255, 0, 0);
-}
-.color-panel .instrument:nth-child(5)::before {
-    background: rgb(0, 0, 255);
-}
-.canvas {
-    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    max-width: 1440px;
     margin: auto;
-    border: 2px solid;
-}
-    /* sidebar right */
-.resize {
-    padding: 20px;
-}
-.size-switcher {
-    box-shadow: 0 1px 6px 1px gray;
-    min-width: 100px;
-    padding: 10px 20px;
-}
-.size {
-    display: block;
-    padding: 10px 6px;
-    cursor: pointer;
-    transition: .3s;
-}
-.size:hover {
-    color: darkcyan;
-}
-.size__input {
-    margin-right: 12px;
-}
-
-@media screen and (max-width: 900px) {
-    .main {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .image {
-        order: 1;
-    }
-    .settings {
-        flex-direction: row;
-        padding: 10px;
-    }
-    .toolbar {
-        margin-right: 10px;
-    }
-    .resize {
-        padding: 10px;  
-        padding-left: 0;
-    }
-    .instrument {
-        padding: 12px 10px;
-    }
-}
-@media screen and (max-width: 570px) {
-    .canvas {
-        width: 340px;
-    }
-    .resize {
-        order: -1;
-    }
-    .size {
-        display: inline-block;
-    }
-}
+    font-family: Roboto, sans-serif;
+    box-shadow: 0 0 50px 1px gray;
+  }
+  /*  Header */
+  .header {
+    height: 48px;
+    box-shadow: 0 1px 5px 1px gray;
+    margin-bottom: 10px;
+  }
+  .h1 {
+    margin-left: 35px;
+    line-height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+  }
+      /* main */
+  .main {
+      display: flex;
+  }
+  .image {
+      flex-grow: 1;
+      padding: 20px 0;
+  }
+      /* sidebar */
+  .settings {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+  }
+  .toolbar, .color-panel {
+      box-shadow: 0 1px 6px 1px gray;
+      min-width: 190px;
+  }
+  .instrument {
+      padding: 12px 20px;
+      padding-right: 0;
+      cursor: pointer;
+      list-style: none;
+      transition: .3s;
+  }
+  .instrument:hover {
+      color: darkcyan;
+  }
+  .instrument label {
+      display: inline-block;
+      height: 100%;
+      width: 65%;
+      padding: 12px 0;
+      margin-left: -5px;
+      cursor: pointer;
+  }
+  .instr_active {
+      background: #ddd;
+  }
+  #color-picker {
+      padding: 0;
+      padding-left: 20px;
+  }
+  .toolbar .instrument::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 35px;
+      vertical-align: middle;
+  }
+  .toolbar .instrument:first-child::before {
+      background: url("../img/icon-bucket.svg") center no-repeat;
+  }
+  .toolbar .instrument:nth-child(2)::before {
+      background: url("../img/icon-choose-color.svg") center no-repeat;
+  }
+  .toolbar .instrument:nth-child(3)::before {
+      background: url("../img/icon-pencil.svg") center no-repeat;
+  }
+  .toolbar .instrument:nth-child(4)::before {
+      background: url("../img/icon-transform.svg") center no-repeat;
+  }
+  
+  .color-panel .instrument span {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 18px;
+      border-radius: 50%;
+      border: 1px solid;
+      vertical-align: middle;
+      margin-top: -4px;
+  }
+  .color-panel .instrument:first-child span {
+      background: rgb(150, 150, 150);
+  }
+  .color-panel .instrument:nth-child(2) span {
+      background: rgb(65, 247, 149);
+  }
+  .color-panel .instrument:nth-child(4) span {
+      background: rgb(255, 0, 0);
+  }
+  .color-panel .instrument:nth-child(5) span {
+      background: rgb(0, 0, 255);
+  }
+  .canvas {
+      display: block;
+      margin: auto;
+      border: 2px solid;
+  }
+      /* sidebar right */
+  .resize {
+      padding: 20px;
+  }
+  .size-switcher {
+      box-shadow: 0 1px 6px 1px gray;
+      min-width: 100px;
+      padding: 10px 20px;
+  }
+  .size {
+      display: block;
+      padding: 10px 6px;
+      cursor: pointer;
+      transition: .3s;
+  }
+  .size:hover {
+      color: darkcyan;
+  }
+  .size__input {
+      margin-right: 12px;
+  }
+  
+  @media screen and (max-width: 900px) {
+      .main {
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      .image {
+          order: 1;
+      }
+      .settings {
+          flex-direction: row;
+          padding: 10px;
+      }
+      .toolbar {
+          margin-right: 10px;
+      }
+      .resize {
+          padding: 10px;  
+          padding-left: 0;
+      }
+      .instrument {
+          padding: 12px 10px;
+      }
+  }
+  @media screen and (max-width: 570px) {
+      .canvas {
+          width: 340px;
+      }
+      .resize {
+          order: -1;
+      }
+      .size {
+          display: inline-block;
+      }
+  }
